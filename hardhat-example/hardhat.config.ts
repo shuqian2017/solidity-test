@@ -1,15 +1,14 @@
-require('@nomicfoundation/hardhat-toolbox');
+import '@nomicfoundation/hardhat-toolbox';
+import { HardhatUserConfig } from 'hardhat/config';
 
 /*
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-module.exports = {
+const config: HardhatUserConfig = {
     defaultNetwork: 'hardhat',
     networks: {
-        hardhat: {
-            httpHeaders: 'fke',
-        },
+        hardhat: {},
         // rinkeby: {
         //     url: 'https://eth-mainnet.alchemyapi.io/v2/123abc123abc123abc123abc123abcde',
         //     accounts: [privateKey1, privateKey2],
@@ -34,3 +33,5 @@ module.exports = {
         timeout: 20000,
     },
 };
+
+export default config;
